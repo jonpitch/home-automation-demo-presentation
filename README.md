@@ -22,6 +22,7 @@ home-automation-demo-presentation
 </ol>
 <pre>
 	git clone https://github.com/jonpitch/home-automation-demo-presentation.git
+	mkdir lib
 	cd lib
 	git clone https://github.com/hakimel/reveal.js.git
 	cd reveal.js
