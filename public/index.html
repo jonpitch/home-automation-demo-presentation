@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Introduction to Home Automation</title>
+
+		<meta name="description" content="An introduction to home automation">
+		<meta name="author" content="Jon Pitcherella">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../lib/reveal.js/css/reveal.min.css">
+		<link rel="stylesheet" href="../lib/reveal.js/css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="../lib/reveal.js/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = '../lib/reveal.js/css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../lib/reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section>
+					<h1>Home Automation</h1>
+					<h3>An introduction to home automation</h3>
+					<p>
+						<small>October 2014</small>
+					</p>
+					<p>
+						<small><a href="http://jonpitcherella.com">Jon Pitcherella</a> / <a href="https://twitter.com/jonpitch">@jonpitch</a> / <a href="https://plus.google.com/+JonPitcherella">+JonPitcherella</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Who is this handsome devil?</h2>
+					<p>Senior developer - <a href="http://jacquette.com">Jacquette Consulting</a></p>
+					<p>Mobile and web application afficionado.</p>
+					<p>Craft beer zealot and home brewer.</p>
+					<p>Fitness enthusiast.</p>
+				</section>
+
+				<section>
+					<h2>What we will cover</h2>
+					<ul>
+						<li>The state of home automation</li>
+						<li>Home automation basics</li>
+						<li>Building a z-wave based home automation system</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>What we won't cover</h2>
+					<ul>
+						<li>Specific commercially available solutions</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Schedule</h2>
+					<ul>
+						<li>Oct. 17th - Intro, basic demonstration</li>
+						<li>Oct. 24th - Mobile, NFC &amp; Beacons</li>
+						<li>Oct. 31st - Hands on / beer social (optional)</li>
+					</ul>
+					<p>
+						<small>If you don't want to come but still want to skip work, I won't tell anyone.</small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Why Automate Your House?</h2>
+					<ul>
+						<li>Why not?</li>
+						<li>it's awesome</li>
+						<li>Energy efficiency</li>
+						<li>Make your house work for you</li>
+						<li>Peace of mind</li>
+						<li>Impress your friends. Intimidate your enemies</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>The current state of home automation</h2>
+					</section>
+					<section>
+						<h2>Lots of options</h2>
+						<img src="img/options.png" alt="Home Automation Options" />
+					</section>
+					<section>
+						<h2>Expensive!</h2>
+						<ul>
+							<li>Some smart components are 5-10x as expensive as their non-smart counterparts</li>
+							<li>On top of being expensive, they're ugly</li>
+							<li>Who wants to replace all of their light switches and outlets?</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Standards</h2>
+						<ul>
+							<li>X10</li>
+							<li>Wifi</li>
+							<li>Insteon</li>
+							<li>Z-Wave</li>
+							<li>Zigbee</li>
+							<li>Rube Goldberg machines</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Pros and Cons</h2>
+						<table>
+							<thead>
+								<tr>
+									<th>Standard</th>
+									<th>Pro</th>
+									<th>Con</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>X10</td>
+									<td>No new devices, sort of</td>
+									<td>Lots of manual electrical work = dangerous</td>
+								</tr>
+								<tr>
+									<td>Wifi</td>
+									<td>Ubiquitous</td>
+									<td>Piece meal</td>
+								</tr>
+								<tr>
+									<td>Insteon</td>
+									<td>Commercially available</td>
+									<td>Expensive, proprietary</td>
+								</tr>
+								<tr>
+									<td>Z-Wave / Zigbee</td>
+									<td>Wireless, Seamless</td>
+									<td>Expensive</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<h2>And the winner is...</h2>
+						<p class="fragment" fragment-index="0">Z-Wave</p>
+					</section>
+					<section>
+						<h2>Side note: the real winner...</h2>
+						<p>The real "winner" in the automation space will be a device that speaks all of these protocols.</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>Why Z-Wave</h2>
+					<ul>
+						<li>Mesh network</li>
+						<li>Wireless</li>
+						<li>Lightweight</li>
+						<li>Easy to work with</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>Infrastructure</h2>
+						<ul>
+							<li><strong>Hub / Controller</strong> - receives communication via HTTP, speaks Z-Wave</li>
+							<li><strong>Devices</strong> - receive Z-Wave signals</li>
+						</ul>
+					</section>
+					<section>
+					<h2>Available Devices</h2>
+						<ul>
+							<li>Light switches</li>
+							<li>Wall outlets</li>
+							<li>Motorized blinds</li>
+							<li>Door locks</li>
+							<li>Irrigation control</li>
+							<li>Likely more...</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Raspberry Pi</h2>
+						<p>This handy little guy will be our hub</p>
+					</section>
+					<section>
+						<h2>Why?</h2>
+						<ul>
+							<li>Setup web server</li>
+							<li>GPIO daughter card - Z-Wave</li>
+							<li>Flexibility</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Bake your Pi</h2>
+						<ul>
+							<li>Need: SD Card, internet connection, display, keyboard, mouse</li>
+							<li>OS Image</li>
+						</ul>
+						<p>There are a good set of instructions on my <a href="http://jonpitcherella.com/2013/07/building-a-mean-pi">website</a></p>
+					</section>
+					<section>
+						<h2>Pi + Daughter = &lt;3</h2>
+						<ol>
+							<li>Log in to Pi</li>
+							<li>Install Razberry</li>
+						</ol>
+						<pre>
+							<code data-trim>
+								wget -q -O - razberry.z-wave.me/install | sudo bash
+							</code>
+						</pre>
+						<p>Now visit the IP of your Pi in a browser</p>
+					</section>
+				</section>
+
+				<section>
+					<h1>Demo!</h1>
+				</section>
+
+				<section>
+					<h2>Remember</h2>
+					<p>Everything is just HTTP</p>
+				</section>
+
+				<section>
+					<h3>Stay tuned for part two...</h3>
+				</section>
+
+				<!-- Part 2 -->
+				<!-- re-iterate, everything is HTTP -->
+				<!-- What is NFC -->
+					<!-- use cases, real world usage, etc. -->
+				<!-- What are beacons -->
+					<!-- use cases, real world usage, etc. -->
+				<!-- IFTT -->
+				<!-- Android application -->
+				<!-- iOS application? -->
+				<!-- Next steps -->
+					<!-- expose over internet, security, etc. -->
+
+
+			</div> <!-- end slides -->
+
+		</div>
+
+		<script src="../lib/reveal.js/lib/js/head.min.js"></script>
+		<script src="../lib/reveal.js/js/reveal.min.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme,
+				transition: Reveal.getQueryHash().transition || 'default',
+
+				dependencies: [
+					{ src: '../lib/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../lib/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../lib/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../lib/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../lib/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../lib/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
