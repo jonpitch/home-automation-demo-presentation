@@ -53,7 +53,6 @@
 					<p>Senior developer - <a href="http://jacquette.com">Jacquette Consulting</a></p>
 					<p>Mobile and web application afficionado.</p>
 					<p>Craft beer zealot and home brewer.</p>
-					<p>Fitness enthusiast.</p>
 				</section>
 
 				<section>
@@ -89,7 +88,7 @@
 					<ul>
 						<li>Why not?</li>
 						<li>Science!</li>
-						<li>it's awesome</li>
+						<li>It's awesome</li>
 						<li>Energy efficiency</li>
 						<li>Make your house work for you</li>
 						<li>Peace of mind</li>
@@ -98,74 +97,77 @@
 				</section>
 
 				<section>
-					<section>
-						<h2>The current state of home automation</h2>
-					</section>
-					<section>
-						<h2>Lots of options</h2>
-						<img src="img/options.png" alt="Home Automation Options" />
-					</section>
-					<section>
-						<h2>Expensive!</h2>
-						<ul>
-							<li>Some smart components are 5-10x as expensive as their non-smart counterparts</li>
-							<li>On top of being expensive, they're ugly</li>
-							<li>Who wants to replace all of their light switches and outlets?</li>
-						</ul>
-					</section>
-					<section>
-						<h2>Standards</h2>
-						<ul>
-							<li>X10</li>
-							<li>Wifi</li>
-							<li>Insteon</li>
-							<li>Z-Wave</li>
-							<li>Zigbee</li>
-							<li>Rube Goldberg machines</li>
-						</ul>
-					</section>
-					<section>
-						<h2>Pros and Cons</h2>
-						<table>
-							<thead>
-								<tr>
-									<th>Standard</th>
-									<th>Pro</th>
-									<th>Con</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>X10</td>
-									<td>No new devices, sort of</td>
-									<td>Lots of manual electrical work = dangerous</td>
-								</tr>
-								<tr>
-									<td>Wifi</td>
-									<td>Ubiquitous</td>
-									<td>Piece meal</td>
-								</tr>
-								<tr>
-									<td>Insteon</td>
-									<td>Commercially available</td>
-									<td>Expensive, proprietary</td>
-								</tr>
-								<tr>
-									<td>Z-Wave / Zigbee</td>
-									<td>Wireless, Seamless</td>
-									<td>Expensive</td>
-								</tr>
-							</tbody>
-						</table>
-					</section>
-					<section>
-						<h2>And the winner is...</h2>
-						<p class="fragment" fragment-index="0">Z-Wave</p>
-					</section>
-					<section>
-						<h2>Side note: the real winner...</h2>
-						<p>The real "winner" in the automation space will be a device that speaks all of these protocols.</p>
-					</section>
+					<h2>The current state of home automation</h2>
+				</section>
+
+				<section>
+					<h2>Lots of options</h2>
+					<img src="img/options.png" alt="Home Automation Options" />
+				</section>
+
+				<section>
+					<h2>Expensive!</h2>
+					<ul>
+						<li>Some smart components are 5-10x as expensive as their non-smart counterparts</li>
+						<li>Also, mostly ugly...</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Standards</h2>
+					<ul>
+						<li>X10</li>
+						<li>Wifi</li>
+						<li>Insteon</li>
+						<li>Z-Wave</li>
+						<li>Zigbee</li>
+						<li>Rube Goldberg machines</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Pros and Cons</h2>
+					<table>
+						<thead>
+							<tr>
+								<th>Standard</th>
+								<th>Pro</th>
+								<th>Con</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>X10</td>
+								<td>No new devices, sort of</td>
+								<td>Lots of manual electrical work = dangerous</td>
+							</tr>
+							<tr>
+								<td>Wifi</td>
+								<td>Ubiquitous</td>
+								<td>Piece meal</td>
+							</tr>
+							<tr>
+								<td>Insteon</td>
+								<td>Commercially available</td>
+								<td>Expensive, proprietary</td>
+							</tr>
+							<tr>
+								<td>Z-Wave / Zigbee</td>
+								<td>Wireless, Seamless</td>
+								<td>Expensive</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+				<section>
+					<h2>And the winner is...</h2>
+					<p class="fragment" fragment-index="0">Z-Wave</p>
+				</section>
+
+				<section>
+					<h2>Side note: the real winner...</h2>
+					<p>The real "winner" in the automation space will be a device that speaks all of these protocols.</p>
 				</section>
 
 				<section>
@@ -174,70 +176,73 @@
 						<li>Mesh network</li>
 						<li>Wireless</li>
 						<li>Lightweight</li>
-						<li>Easy to work with</li>
+						<li>"easy" to work with</li>
 					</ul>
 				</section>
 
 				<section>
-					<section>
-						<h2>Infrastructure</h2>
-						<ul>
-							<li><strong>Hub / Controller</strong> - receives communication via HTTP, speaks Z-Wave</li>
-							<li><strong>Devices</strong> - receive Z-Wave signals</li>
-						</ul>
-					</section>
-					<section>
-					<h2>Available Devices</h2>
-						<ul>
-							<li>Light switches</li>
-							<li>Wall outlets</li>
-							<li>Motorized blinds</li>
-							<li>Door locks</li>
-							<li>Irrigation control</li>
-							<li>Likely more...</li>
-						</ul>
-					</section>
+					<h2>Infrastructure</h2>
+					<ul>
+						<li><strong>Hub / Controller</strong> - receives communication via HTTP, speaks Z-Wave</li>
+						<li><strong>Devices</strong> - receive Z-Wave signals</li>
+					</ul>
 				</section>
 
 				<section>
-					<section>
-						<h2>Raspberry Pi</h2>
-						<p>This handy little guy will be our hub</p>
-					</section>
-					<section>
-						<h2>Why?</h2>
-						<ul>
-							<li>Setup web server</li>
-							<li>GPIO daughter card - Z-Wave</li>
-							<li>Flexibility</li>
-						</ul>
-					</section>
-					<section>
-						<h2>Bake your Pi</h2>
-						<ul>
-							<li>Need: SD Card, internet connection, display, keyboard, mouse</li>
-							<li>OS Image</li>
-						</ul>
-						<p>There are a good set of instructions on my <a href="http://jonpitcherella.com/2013/07/building-a-mean-pi">website</a></p>
-					</section>
-					<section>
-						<h2>Pi + Daughter = &lt;3</h2>
-						<ol>
-							<li>Log in to Pi</li>
-							<li>Install Razberry</li>
-						</ol>
-						<pre>
-							<code data-trim>
-								wget -q -O - razberry.z-wave.me/install | sudo bash
-							</code>
-						</pre>
-						<p>Now visit:</p>
-						<pre>
-							<code data-trim>
-								http://ipofyourpi:8083
-							</code>
-						</pre>
-					</section>
+					<h2>Available Devices</h2>
+					<ul>
+						<li>Thermostats</li>
+						<li>Light switches</li>
+						<li>Wall outlets</li>
+						<li>Motorized blinds</li>
+						<li>Door locks</li>
+						<li>Irrigation control</li>
+						<li>Likely more...</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Raspberry Pi</h2>
+					<p>Credit card sized computer</p>
+					<p>Cheap &amp; flexible</p>
+					<p>This handy little guy will be our hub</p>
+				</section>
+
+				<section>
+					<h2>Why pi?</h2>
+					<ul>
+						<li>Setup web server</li>
+						<li>GPIO daughter card - Z-Wave</li>
+						<li>Flexibility</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Bake your Pi</h2>
+					<ul>
+						<li>Need: SD Card, internet connection, display, keyboard, mouse</li>
+						<li>OS Image</li>
+					</ul>
+					<p>There are a good set of instructions on my <a href="http://jonpitcherella.com/2013/07/building-a-mean-pi">website</a></p>
+				</section>
+
+				<section>
+					<h2>Pi + Daughter = &lt;3</h2>
+					<ol>
+						<li>Log in to Pi</li>
+						<li>Install Razberry</li>
+					</ol>
+					<pre>
+						<code data-trim>
+							wget -q -O - razberry.z-wave.me/install | sudo bash
+						</code>
+					</pre>
+					<p>Now visit:</p>
+					<pre>
+						<code data-trim>
+							http://ipofyourpi:8083
+						</code>
+					</pre>
 				</section>
 
 				<section>
@@ -250,21 +255,93 @@
 				</section>
 
 				<section>
-					<h3>Stay tuned for part two...</h3>
+					<h3>Stay tuned for the exciting conclusion...</h3>
 				</section>
 
 				<!-- Part 2 -->
-				<!-- re-iterate, everything is HTTP -->
-				<!-- What is NFC -->
-					<!-- use cases, real world usage, etc. -->
-				<!-- What are beacons -->
-					<!-- use cases, real world usage, etc. -->
-				<!-- IFTT -->
-				<!-- Android application -->
-				<!-- iOS application? -->
-				<!-- Next steps -->
-					<!-- expose over internet, security, etc. -->
+				<section>
+					<h1>Part 2</h1>
+				</section>
 
+				<section>
+					<h3>Remember...</h3>
+					<p>Everything is just HTTP</p>
+				</section>
+
+				<section>
+					<h2>NFC</h2>
+					<p>Near field communications</p>
+					<p>Has been around for a while</p>
+					<p>Electro-magnetic fields!</p>
+					<p>Powered &amp; non-powered</p>
+				</section>
+
+				<section>
+					<h3>Quick NFC Demo</h3>
+				</section>
+
+				<section>
+					<h2>Why not Bluetooth or RFID?</h2>
+					<p>We'll be talking bluetooth later, hold your horses...</p>
+					<p>No reason, but all three solve different types of problems</p>
+				</section>
+
+				<section>
+					<h2>Common NFC Use Cases</h2>
+					<ul>
+						<li>Payments</li>
+						<li>Very near (get it?) interactions, Android Beam</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>You may have already seen it or be using it...</h2>
+					<p>Some cities use NFC for their transportation systems</p>
+					<p>Contact-less payments have been around for a long time, PayPass</p>
+					<p>Google Wallet and (insert long sigh...) Apple Pay</p>
+				</section>
+
+				<section>
+					<h2>Beacons</h2>
+					<p>Not to be confused with "iBeacon"</p>
+					<p>Bluetooth low energy (BLE)</p>
+					<p>Think indoor GPS</p>
+					<p>Context is king!</p>
+				</section>
+
+				<section>
+					<h2>BLE</h2>
+					<p>Much lower power consumed than Bluetooth</p>
+					<p>No pairing required</p>
+				</section>
+
+				<section>
+					<h3>Quick Beacon Demo</h3>
+				</section>
+
+				<section>
+					<h2>Before we get to Android, some final thoughts</h2>
+					<p>IFTT</p>
+					<p>Security</p>
+				</section>
+
+				<section>
+					<h2>Android</h2>
+					<p>Demo app available on <a href="https://github.com/jonpitch/home-automation-demo-android">Github</a></p>
+				</section>
+
+				<section>
+					<h3>Demo Android App</h3>
+				</section>
+
+				<section>
+					<h2>Final questions, comments?</h2>
+				</section>
+
+				<section>
+					<h2>Arrivederci</h2>
+					<p>Don't forget, beer social next week if interested...</p>
+				</section>
 
 			</div> <!-- end slides -->
 
