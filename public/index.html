@@ -106,12 +106,12 @@
 				</section>
 
 				<section>
-					<h2>Lots of options</h2>
-					<img src="img/options.png" alt="Home Automation Options" />
+					<img src="img/meme-options.jpg" alt="First world problems" />
 				</section>
 
 				<section>
-					<img src="img/meme-options.jpg" alt="First world problems" />
+					<h2>Lots of options</h2>
+					<img src="img/options.png" alt="Home Automation Options" />
 				</section>
 
 				<section>
@@ -123,15 +123,49 @@
 				</section>
 
 				<section>
+					<h2>Multiple Protocols</h2>
+					<ul>
+						<li>Have to buy in completely</li>
+						<li>Mobile apps are really poor</li>
+						<li>Multiple apps to control your house, lame!</li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="img/meme-brace.jpg" alt="Brace yourself" />
+				</section>
+
+				<section>
 					<h2>Standards</h2>
 					<ul>
-						<li>X10</li>
-						<li>Insteon</li>
-						<li>Z-Wave</li>
-						<li>Zigbee</li>
+						<li>X10 (electrical)</li>
+						<li>Insteon (RF - mesh)</li>
+						<li>Z-Wave (RF - mesh)</li>
+						<li>Zigbee (RF - star/tree/mesh)</li>
 						<li>Wifi</li>
 						<li>Rube Goldberg machines</li>
 					</ul>
+				</section>
+
+				<section>
+					<h2>Mesh Networks</h2>
+					<img src="img/mesh.png" alt="Mesh Network" />
+				</section>
+
+				<section>
+					<h3>What in the world is a mesh network?</h3>
+					<ul>
+						<li>Each node relays data</li>
+						<li>Self-healing = very reliable</li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="img/meme-node-fail.jpg" alt="Node Failure" />
+				</section>
+
+				<section>
+					<h2>Back to standards...</h2>
 				</section>
 
 				<section>
@@ -140,7 +174,7 @@
 						<li>Developed in 1975</li>
 						<li>Most widely available</li>
 						<li>Primarily uses power line wiring for signals</li>
-						<li>One command at a time, relatively slow, limited</li>
+						<li>One command at a time, relatively slow, limited message set</li>
 					</ul>
 				</section>
 
@@ -161,6 +195,15 @@
 						<li>Mesh network</li>
 						<li>Getting cheaper</li>
 						<li>Low power RF</li>
+						<li>Operates around 900 mhz, where most other devices operate in the 2.4 GHz range</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Z-Wave (continued)</h2>
+					<ul>
+						<li>Z-Wave Alliance - 250 manufacturers (most you probably never heard of)</li>
+						<li>More than 1100 products certified</li>
 					</ul>
 				</section>
 
@@ -169,7 +212,9 @@
 					<ul>
 						<li>Standardized in 2003, IEEE 802.15</li>
 						<li>Very low power RF, secure</li>
-						<li>Mesh network</li>
+						<li>Supports star / tree and mesh network topologies.</li>
+						<li>Zigbee alliance (lots of big name companies)</li>
+						<li>Refused GPL standard</li>
 					</ul>
 				</section>
 
@@ -222,8 +267,8 @@
 				<section>
 					<h2>Infrastructure</h2>
 					<ul>
-						<li><strong>Hub / Controller</strong> - receives communication via HTTP, speaks Z-Wave</li>
-						<li><strong>Devices</strong> - receive Z-Wave signals</li>
+						<li><strong>Controller (hub)</strong> - receives user input, delegates to devices</li>
+						<li><strong>Devices</strong> - receives signals from hub</li>
 					</ul>
 				</section>
 
@@ -238,7 +283,7 @@
 					<h2>Why pi?</h2>
 					<ul>
 						<li>Setup web server</li>
-						<li>GPIO daughter card - Razberry</li>
+						<li><a href="http://razberry.z-wave.me/index.php?id=9">GPIO daughter card</a> - Razberry</li>
 						<li>Flexibility - write our own API, security layer, etc.</li>
 					</ul>
 				</section>
@@ -248,7 +293,12 @@
 					<ul>
 						<li>Need: SD Card, internet connection, display, keyboard, mouse</li>
 						<li>OS Image</li>
+						<li>Also plug in the daughter card</li>
 					</ul>
+				</section>
+
+				<section>
+					<h2>If you need pi help...</h2>
 					<p>There are a good set of instructions on my <a href="http://jonpitcherella.com/2013/07/building-a-mean-pi">website</a></p>
 				</section>
 
@@ -304,6 +354,10 @@
 				</section>
 
 				<section>
+					<img src="img/meme-nfc.jpg" alt="I NFC what you did there" />
+				</section>
+
+				<section>
 					<h2>NFC</h2>
 					<p>Near field communication</p>
 					<p>Has been around for a while</p>
@@ -321,10 +375,6 @@
 
 				<section>
 					<h3>Quick NFC Demo</h3>
-				</section>
-
-				<section>
-					<img src="img/meme-nfc.jpg" alt="I NFC what you did there" />
 				</section>
 
 				<section>
