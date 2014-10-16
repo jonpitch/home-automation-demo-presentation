@@ -97,12 +97,21 @@
 				</section>
 
 				<section>
+					<h3>Where home automation is powerful</h3>
+					<p>Context!</p>
+				</section>
+
+				<section>
 					<h2>The current state of home automation</h2>
 				</section>
 
 				<section>
 					<h2>Lots of options</h2>
 					<img src="img/options.png" alt="Home Automation Options" />
+				</section>
+
+				<section>
+					<img src="img/meme-options.jpg" alt="First world problems" />
 				</section>
 
 				<section>
@@ -117,52 +126,69 @@
 					<h2>Standards</h2>
 					<ul>
 						<li>X10</li>
-						<li>Wifi</li>
 						<li>Insteon</li>
 						<li>Z-Wave</li>
 						<li>Zigbee</li>
+						<li>Wifi</li>
 						<li>Rube Goldberg machines</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>Pros and Cons</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Standard</th>
-								<th>Pro</th>
-								<th>Con</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>X10</td>
-								<td>No new devices, sort of</td>
-								<td>Lots of manual electrical work = dangerous</td>
-							</tr>
-							<tr>
-								<td>Wifi</td>
-								<td>Ubiquitous</td>
-								<td>Piece meal</td>
-							</tr>
-							<tr>
-								<td>Insteon</td>
-								<td>Commercially available</td>
-								<td>Expensive, proprietary</td>
-							</tr>
-							<tr>
-								<td>Z-Wave / Zigbee</td>
-								<td>Wireless, Seamless</td>
-								<td>Expensive</td>
-							</tr>
-						</tbody>
-					</table>
+					<h2>X10</h2>
+					<ul>
+						<li>Developed in 1975</li>
+						<li>Most widely available</li>
+						<li>Primarily uses power line wiring for signals</li>
+						<li>One command at a time, relatively slow, limited</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Insteon</h2>
+					<ul>
+						<li>Roughly around since the mid 90s</li>
+						<li>Available in most stores</li>
+						<li>Fairly expensive</li>
+						<li>Mesh network</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Z-Wave</h2>
+					<ul>
+						<li>Not as widely available locally, but lots of products online</li>
+						<li>Mesh network</li>
+						<li>Getting cheaper</li>
+						<li>Low power RF</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Zigbee</h2>
+					<ul>
+						<li>Standardized in 2003, IEEE 802.15</li>
+						<li>Very low power RF, secure</li>
+						<li>Mesh network</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Wifi</h2>
+					<ul>
+						<li>If I have to explain what wifi is...</li>
+						<li>Not quite the same as the others, however much more ubiquitous</li>
+						<li>Some popular devices use Wifi (Nest, Phillips HUE, Sonos - sort of)</li>
+					</ul>
 				</section>
 
 				<section>
 					<h2>And the winner is...</h2>
 					<p class="fragment" fragment-index="0">Z-Wave</p>
+				</section>
+
+				<section>
+					<img src="img/meme-kermit.jpg" alt="None of my business" />
 				</section>
 
 				<section>
@@ -176,20 +202,12 @@
 						<li>Mesh network</li>
 						<li>Wireless</li>
 						<li>Lightweight</li>
-						<li>"easy" to work with</li>
+						<li>"easy" to work with - Razberry</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>Infrastructure</h2>
-					<ul>
-						<li><strong>Hub / Controller</strong> - receives communication via HTTP, speaks Z-Wave</li>
-						<li><strong>Devices</strong> - receive Z-Wave signals</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Available Devices</h2>
+					<h2>Available Z-Wave Devices</h2>
 					<ul>
 						<li>Thermostats</li>
 						<li>Light switches</li>
@@ -198,6 +216,14 @@
 						<li>Door locks</li>
 						<li>Irrigation control</li>
 						<li>Likely more...</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Infrastructure</h2>
+					<ul>
+						<li><strong>Hub / Controller</strong> - receives communication via HTTP, speaks Z-Wave</li>
+						<li><strong>Devices</strong> - receive Z-Wave signals</li>
 					</ul>
 				</section>
 
@@ -212,8 +238,8 @@
 					<h2>Why pi?</h2>
 					<ul>
 						<li>Setup web server</li>
-						<li>GPIO daughter card - Z-Wave</li>
-						<li>Flexibility</li>
+						<li>GPIO daughter card - Razberry</li>
+						<li>Flexibility - write our own API, security layer, etc.</li>
 					</ul>
 				</section>
 
@@ -264,16 +290,33 @@
 				</section>
 
 				<section>
-					<h3>Remember...</h3>
+					<h2>Quick Recap</h2>
+					<ul>
+						<li>Lots of options out there</li>
+						<li>We're sticking with Z-Wave</li>
+						<li>Raspberry Pi is our hub</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Also Remember...</h3>
 					<p>Everything is just HTTP</p>
 				</section>
 
 				<section>
 					<h2>NFC</h2>
-					<p>Near field communications</p>
+					<p>Near field communication</p>
 					<p>Has been around for a while</p>
-					<p>Electro-magnetic fields!</p>
 					<p>Powered &amp; non-powered</p>
+				</section>
+
+				<section>
+					<h2>How NFC Works</h2>
+					<ul>
+						<li>Antenna produces electric or magnetic field</li>
+						<li>The receiver must be within the field</li>
+						<li>Range is incredibly small, hard to eavesdrop</li>
+					</ul>
 				</section>
 
 				<section>
@@ -281,21 +324,32 @@
 				</section>
 
 				<section>
+					<img src="img/meme-nfc.jpg" alt="I NFC what you did there" />
+				</section>
+
+				<section>
 					<h2>Why not Bluetooth or RFID?</h2>
 					<p>We'll be talking bluetooth later, hold your horses...</p>
 					<p>No reason, but all three solve different types of problems</p>
+					<ul>
+						<li>NFC is very cheap by comparison</li>
+						<li>NFC is more secure do to range restrictions</li>
+						<li>However NFC is very limited by its data transfer capability</li>
+					</ul>
 				</section>
 
 				<section>
 					<h2>Common NFC Use Cases</h2>
 					<ul>
-						<li>Payments</li>
-						<li>Very near (get it?) interactions, Android Beam</li>
+						<li>Payments / Commerce</li>
+						<li>Ticketing / Coupons</li>
+						<li>Identity</li>
+						<li>Bootstrapping more complex connections - Android Beam</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>You may have already seen it or be using it...</h2>
+					<h2>You may have already seen it or be using it</h2>
 					<p>Some cities use NFC for their transportation systems</p>
 					<p>Contact-less payments have been around for a long time, PayPass</p>
 					<p>Google Wallet and (insert long sigh...) Apple Pay</p>
@@ -310,9 +364,10 @@
 				</section>
 
 				<section>
-					<h2>BLE</h2>
-					<p>Much lower power consumed than Bluetooth</p>
-					<p>No pairing required</p>
+					<h2>BLE / Bluetooth Smart</h2>
+					<p>Much lower power consumed than Bluetooth, similar transfer</p>
+					<p>No pairing required!</p>
+					<p>Supported by iOS 6+, Android 4.4+, Windows 8, Linux, OSX</p>
 				</section>
 
 				<section>
@@ -320,9 +375,23 @@
 				</section>
 
 				<section>
-					<h2>Before we get to Android, some final thoughts</h2>
-					<p>IFTT</p>
-					<p>Security</p>
+					<h2>Before the mobile app, some final thoughts</h2>
+				</section>
+
+				<section>
+					<h2>Security</h2>
+					<ul>
+						<li>Razberry has none!</li>
+						<li>Not exposed to the outside world, be careful when it is</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>IFTTT</h2>
+					<ul>
+						<li>Can be used to automate your house further</li>
+						<li>Can also automate other parts of your life</li>
+					</ul>
 				</section>
 
 				<section>
@@ -340,7 +409,7 @@
 
 				<section>
 					<h2>Arrivederci</h2>
-					<p>Don't forget, beer social next week if interested...</p>
+					<p>Don't forget, beer social &amp; programming next week if interested...</p>
 				</section>
 
 			</div> <!-- end slides -->
