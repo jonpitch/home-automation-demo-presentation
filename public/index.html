@@ -336,21 +336,58 @@
 
 				<!-- Part 2 -->
 				<section>
-					<h1>Part 2</h1>
+					<h1>Home Automation</h1>
+					<h3>Introduction to Home Automation: Part 2</h3>
 				</section>
 
 				<section>
 					<h2>Quick Recap</h2>
 					<ul>
 						<li>Lots of options out there</li>
-						<li>We're sticking with Z-Wave</li>
+						<li>We're sticking with Z-Wave, mesh networks</li>
 						<li>Raspberry Pi is our hub</li>
+						<li>Razberry Project</li>
 					</ul>
 				</section>
 
 				<section>
-					<h3>Also Remember...</h3>
-					<p>Everything is just HTTP</p>
+					<img src="img/meme-http.jpg" alt="Everything is HTTP" />
+				</section>
+
+				<section>
+					<h2>A super fast, very high level intro to Android</h2>
+					<p>Hold on to your butts...</p>
+				</section>
+
+				<section>
+					<img src="img/meme-nobodycares.jpg" alt="Nobody cares" />
+				</section>
+
+				<section>
+					<h2>Activities / Fragments</h2>
+					<ul>
+						<p>Think "every screen"</p>
+						<p>Declared in the manifest</p>
+						<p><a href="http://developer.android.com/images/activity_lifecycle.png">Lifecycle!</a></p>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Context</h2>
+					<ul>
+						<li>"God" object</li>
+						<li>Access information about application environment</li>
+						<li>Abstract class, implementation provided by Android</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Intents</h2>
+					<ul>
+						<li>An abstract description of an operation to be performed</li>
+						<li>Most significantly used to launch activities, the "glue" between activities</li>
+						<li>Intents can pass data</li>
+					</ul>
 				</section>
 
 				<section>
@@ -360,7 +397,7 @@
 				<section>
 					<h2>NFC</h2>
 					<p>Near field communication</p>
-					<p>Has been around for a while</p>
+					<p>Has been around for a while, have you checked your credit cards recently?</p>
 					<p>Powered &amp; non-powered</p>
 				</section>
 
@@ -369,7 +406,7 @@
 					<ul>
 						<li>Antenna produces electric or magnetic field</li>
 						<li>The receiver must be within the field</li>
-						<li>Range is incredibly small, hard to eavesdrop</li>
+						<li>Range is incredibly small (~4 cm), hard to eavesdrop</li>
 					</ul>
 				</section>
 
@@ -379,7 +416,6 @@
 
 				<section>
 					<h2>Why not Bluetooth or RFID?</h2>
-					<p>We'll be talking bluetooth later, hold your horses...</p>
 					<p>No reason, but all three solve different types of problems</p>
 					<ul>
 						<li>NFC is very cheap by comparison</li>
@@ -406,22 +442,52 @@
 				</section>
 
 				<section>
+					<h2>NFC in Android</h2>
+					<ul>
+						<li>NFC tag scan = Intent</li>
+						<li>One of our activities handles the Intent, grabs URI</li>
+						<li>Parse the URI, then do something</li>
+						<li>Take me to the code!</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Why not just use the light switch?</h2>
+					<ul>
+						<li>Yeah, that was a trivial example, sorry!</li>
+						<li>Use your imagination, NFC can add meaningful context to your automated home</li>
+					</ul>
+				</section>
+
+				<section>
 					<h2>Beacons</h2>
 					<p>Not to be confused with "iBeacon"</p>
 					<p>Bluetooth low energy (BLE)</p>
 					<p>Think indoor GPS</p>
 					<p>Context is king!</p>
+					<p><a href="https://www.youtube.com/watch?v=sUIqfjpInxY">Demo video</a></p>
 				</section>
 
 				<section>
 					<h2>BLE / Bluetooth Smart</h2>
 					<p>Much lower power consumed than Bluetooth, similar transfer</p>
-					<p>No pairing required!</p>
+					<p><strong>No pairing required!</strong></p>
 					<p>Supported by iOS 6+, Android 4.4+, Windows 8, Linux, OSX</p>
 				</section>
 
 				<section>
 					<h3>Quick Beacon Demo</h3>
+				</section>
+
+				<section>
+					<h2>Beacons in Android</h2>
+					<ul>
+						<li>Specifically Estimote SDK</li>
+						<li>Activity starts, sets up listener</li>
+						<li>Receiving all beacons within range</li>
+						<li>If our beacon is within range, do X, otherwise Y</li>
+						<li>Again, take me to the code!</li>
+					</ul>
 				</section>
 
 				<section>
@@ -458,8 +524,17 @@
 				</section>
 
 				<section>
-					<h2>Arrivederci</h2>
-					<p>Don't forget, beer social &amp; programming next week if interested...</p>
+					<h2>For the final class...</h2>
+					<ul>
+						<li>Bring your computers / devices</li>
+						<li>Homework: pick a project to work on, setup</li>
+						<li>Come ready to work on it</li>
+						<li>Don't forget, there can be beer next weekend if interested...</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Arrivederci e Grazie!</h2>
 				</section>
 
 			</div> <!-- end slides -->
